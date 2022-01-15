@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /*----------------------------------------------------------------------------------
 Reset
 ----------------------------------------------------------------------------------*/
+@font-face {
+    font-family: Euclid;
+    src: url(../fonts/EuclidCircularB-Regular.ttf);
+}
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: Euclid;
 }
 body,html{
     width: 100%;
@@ -430,7 +433,7 @@ line-height: 14px;
     color: var(--white);
 }
 .DekstopNavTop .right .searchdiv input{
-    width: 110px;
+    width: 130px;
 }
 .DekstopNavTop .right .searchdiv button{
     margin-right: 9px;
@@ -440,7 +443,6 @@ line-height: 14px;
     font-style: normal;
 font-weight: normal;
 font-size: 14px;
-line-height: 12px;
 /* identical to box height, or 100% */
 
 
@@ -464,6 +466,44 @@ color: var(--white);
 }
 .DekstopNavBottom .navtext ul li{
     margin: 0 7px;
+    position: relative;
+}
+.DekstopNavBottom .navtext ul li .downmenu{
+    position: absolute;
+    left: 0;
+    top: 200%;
+    background: var(--main);
+    z-index: 100;
+    width: 200px;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    transform: translateY(-10px);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms;
+}
+.DekstopNavBottom .navtext ul li .downmenu.active{
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+}
+.DekstopNavBottom .navtext ul li .downmenu ul{
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+.DekstopNavBottom .navtext ul li .downmenu ul li{
+    width: 100%;
+    margin: 5px 0;
+    text-align: start;
+    display: flex;
+}
+.DekstopNavBottom .navtext ul li .downmenu ul li a{
+    display: flex;
+    width: 100%;
+    text-align: start;
+    align-content: center;
+    justify-content: flex-start;
 }
 .DekstopNavBottom .navtext ul li a{
     text-decoration: none;
@@ -532,14 +572,16 @@ mobileopenmenu
 }
 .mobileopenmenu .content{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     padding: 10px 10px 0px 10px;
+
 }
 .mobileopenmenu .top{
     display: flex;
     align-content: center;
-    justify-content: space-between;
+    justify-content: center;
+
 }
 .mobileopenmenu .comunication button{
     background: transparent;
@@ -659,18 +701,30 @@ color: var(--white);
     display: flex;
     align-content: center;
     justify-content: center;
+    margin: 20px 0;
 }
 .mobileopenmenu .navtext ul{
     margin: 0;
     padding: 0;
     width: 200px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 .mobileopenmenu .navtext ul li{
-    margin: 7px 0px;
+    margin: 8px 0px;
+    position: relative;
+}
+.mobileopenmenu .navtext ul li .downmenu{
+    background: var(--main);
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px 0;
+    display: none;
+}
+.mobileopenmenu .navtext ul li .downmenu.active{
+    display: inline-block;
 }
 .mobileopenmenu .navtext ul li a{
     text-decoration: none;
@@ -679,7 +733,7 @@ color: var(--white);
     justify-content: center;
     font-style: normal;
 font-weight: normal;
-font-size: 14px;
+font-size: 16px;
 line-height: 14px;
 /* identical to box height, or 100% */
 
@@ -691,9 +745,7 @@ color: var(--white);
 .mobileopenmenu .navtext ul li a i{
     margin-left: 4px;
 }
-.mobileopenmenu .account{
-    margin-top: 2px;
-}
+
 .mobileopenmenu .account a{
     padding: 13px 12px; 
 }

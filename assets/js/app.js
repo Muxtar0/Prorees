@@ -59,3 +59,13 @@ filtertarget.addEventListener('click' , (e) => {
         }
     }
 })
+
+
+const navtexts = document.querySelectorAll('.navtext  .downmenuli');
+const downmenus = document.querySelectorAll('.navtext li .downmenu')
+
+for(let i = 0 ; i < navtexts.length; i++){
+    navtexts[i].addEventListener("click" , (e) => {
+        downmenus[i].classList.toggle('active')
+    })
+}
