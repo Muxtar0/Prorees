@@ -1755,5 +1755,170 @@ footer .licensecon .col-12 .right .selectdownmenu ul{
     flex-direction:column;
 }
 /*----------------------------------------------------------------------------------
-Header
+Media
 ----------------------------------------------------------------------------------*/
+@media (max-width:992px){
+    .DekstopNavCol{
+        display: none;
+    }
+    .bannercontent .bannerbottom .content{
+        flex-wrap: wrap;
+    }
+    .bannercontent .bannerbottom .content .bottomitem{
+        width: 30%;
+    }
+    .bannercontent .bannerbottom .content .bottomitem:last-child{
+        width: 30%;
+        padding: 16px;
+    }
+    .bannercontent .bannerbottom .content .bottomitem:nth-child(5):after{
+        display: inline-block;
+    }
+    .bannercontent .bannerbottom{
+        height: auto;
+        bottom: -40%;
+    }
+    .recomendedproperties{
+        margin-top: 220px;
+    }
+    .filter .filtercontents{
+        flex-wrap: wrap;
+    }
+    .filter .filtercontents .item{
+        margin: 5px;
+    }
+    .investments .sectiontitle p{
+        width: 100%;
+    }
+    .proreestv{
+        padding-bottom:460px ;
+    }
+    .topsection .col-lg-6.investmentcol .content{
+        margin-top: 20px;
+    }
+    .Specials {
+        padding-top: 425px;
+    }
+    .specialscon .cardcol .content{
+        max-width: 430px;
+        margin: 10px auto;
+    }
+    .specialscon .textcol   .content{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .specialscon .textcol a{
+        margin: 5px auto;
+    }
+    .downloadapp{
+        height: auto;
+        padding-top: 30px;
+    }
+    .downloadappcon .right .content{
+        justify-content: space-between;
+    }
+    .downloadappcon .right .content .imgdiv{
+        position: relative;
+        transform: translateY(120px);
+    }
+    footer ul{
+        flex-wrap: wrap;
+    }
+    footer ul ul{
+        align-content: flex-start;
+    }
+    footer ul .mainli{
+        width: 30%;
+        margin: 10px;
+    }
+    footer .footerbottomcon .col-12 .left img{
+        object-fit: contain;
+    }
+    footer .footerbottomcon .left .socialmedias{
+        margin-left: 15px;
+    }
+}
+@media (max-width:600px){
+    .bannercontent .item .content p{
+        width: 78%;
+    }
+    .bannercontent .owl-nav{
+        padding: 0 5px;
+    }
+    .bannercontent .item .content h2{
+        text-align: center;
+    }
+    .bannercontent .owl-nav button{
+        width: 35px;
+        height: 35px;
+    }
+    .bannercontent .owl-nav{
+        padding: 2px;
+    }
+    .owl-theme .owl-nav [class*=owl-]{
+        margin: 0px;
+    }
+    .bannercontent .bannerbottom{
+        position: relative;
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    .bannercontent .bannerbottom .content{
+        flex-direction: column;
+    }
+    .bannercontent .bannerbottom .content .bottomitem{
+        width: 90%;
+    }
+    .bannercontent .bannerbottom .content .bottomitem:last-child{
+        width: 90%;
+    }
+    .recomendedproperties{
+        margin-top: 100px;
+    }
+    .filter .filtertarget ul{
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .testimonials .sectiontitle p{
+        width: 100%;
+    }
+    .topsection .col-lg-6 .content{
+        padding: 20px;
+    }
+    .proreestv{
+        padding-bottom: 530px;
+    }
+    .Specials{
+        padding-top: 200px;
+    }
+    .specialscon .cardcol .content{
+        width: 95%;
+    }
+    .recentlyadd .sectiontitle p{
+        width: 100%;
+    }
+    .downloadappcon .left .content{
+        text-align: center;
+    }
+    .downloadappcon .left p{
+        width: 320px;
+    }
+    .downloadappcon .right .content .buttons{
+        transform: translateX(-80px);
+    }
+    footer .footerbottomcon .col-12{
+        flex-direction: column;
+    }
+    footer .footerbottomcon .right{
+        margin-top: 15px;
+    }
+    footer .licensecon .col-12{
+        flex-wrap: wrap;
+    }
+    footer .licensecon .col-12 .right{
+        margin-top: 15px;
+    }
+}
