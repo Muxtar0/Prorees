@@ -319,6 +319,11 @@ Header
 header{
 padding: 30px 0;
 background: var(--primary);
+z-index: 1000;
+}
+header.active{
+    position: fixed;
+    width: 100%;
 }
 .DekstopNavTop{
     display: flex;
@@ -483,6 +488,216 @@ color: var(--white);
     padding: 13px 12px; 
 }
 /*----------------------------------------------------------------------------------
+Mobile Nav
+----------------------------------------------------------------------------------*/
+.MobileNav .col-12{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+.MobileNav .col-12 .logo{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.MobileNav .col-12 .logo img{
+    object-fit: contain;
+}
+.MobileNav .col-12 .right{
+    display: flex;
+    align-content: center;
+}
+.MobileNav .col-12 .right .select{
+    margin: auto;
+}
+/*----------------------------------------------------------------------------------
+mobileopenmenu
+----------------------------------------------------------------------------------*/
+.mobileopenmenu{
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    background: var(--primary);
+    z-index: 1000;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 500ms;
+}
+.mobileopenmenu.active{
+    height: 100vh;
+    visibility: visible;
+    opacity: 1;
+}
+.mobileopenmenu .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 10px 0px 10px;
+}
+.mobileopenmenu .top{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+.mobileopenmenu .comunication button{
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 12px;
+/* identical to box height, or 100% */
+
+
+/* white */
+
+color: var(--white);
+}
+.mobileopenmenu .comunication button svg{
+    margin-right: 9px;
+}
+.mobileopenmenu .comunication button i{
+    margin-left: 4px;
+}
+
+.mobileopenmenu .socialmedias{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.mobileopenmenu .socialmedias ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.mobileopenmenu .socialmedias ul li{
+    margin: 0 7px;
+}
+.mobileopenmenu .socialmedias ul li a{
+    color: white;
+    opacity: .6;
+    transition: all 300ms;
+}
+.mobileopenmenu .socialmedias ul li a:hover{
+    opacity: 1;
+}
+.mobileopenmenu .currency ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.mobileopenmenu .currency ul li{
+    margin: 0 5px;
+    width: 20px;
+height: 20px;
+border-radius: 4px;
+}
+.mobileopenmenu .currency ul li button{
+    background: transparent;
+    border:none;
+    outline: none;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 14px;
+}
+.mobileopenmenu .currency ul li button.active{
+    background: var(--white);
+    color: var(--primary);
+}
+.mobileopenmenu .searchdiv{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    padding: 5px;
+}
+.mobileopenmenu .searchdiv button,
+.mobileopenmenu .searchdiv input{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+}
+.mobileopenmenu .searchdiv input{
+    width: 100%;
+    padding: 10px 5;
+}
+.mobileopenmenu .searchdiv button{
+    margin-right: 9px;
+}
+
+.mobileopenmenu .searchdiv input::placeholder{
+    font-style: normal;
+font-weight: normal;
+font-size: 14px;
+/* identical to box height, or 100% */
+
+
+/* white */
+
+color: var(--white);
+}
+
+.mobileopenmenu .navtext{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.mobileopenmenu .navtext ul{
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.mobileopenmenu .navtext ul li{
+    margin: 7px 0px;
+}
+.mobileopenmenu .navtext ul li a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 14px;
+/* identical to box height, or 100% */
+
+
+/* white */
+
+color: var(--white);
+}
+.mobileopenmenu .navtext ul li a i{
+    margin-left: 4px;
+}
+.mobileopenmenu .account{
+    margin-top: 2px;
+}
+.mobileopenmenu .account a{
+    padding: 13px 12px; 
+}
+/*----------------------------------------------------------------------------------
 Banner
 ----------------------------------------------------------------------------------*/
 .banner{
@@ -550,7 +765,7 @@ border-radius: 4px !important;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 400px;
+    height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;    
@@ -630,7 +845,7 @@ z-index: 100;
 .bannercontent .bannerbottom .content .bottomitem{
     width: 19%;
     position: relative;
-    padding: 16px;
+    padding: 10px;
 }
 .bannercontent .bannerbottom .content .bottomitem::after{
     content: "";
@@ -673,9 +888,7 @@ color: #0C1A3D;
     margin-top: 13px;
     width: 100%;
 }
-.bannercontent .bannerbottom .content .bottomitem .botomcontent svg{
-    margin-right: 10px;
-}
+
 .bannercontent .bannerbottom .content .bottomitem .botomcontent .selectdiv{
     width: 100%;
 }
@@ -694,6 +907,35 @@ line-height: 20px;
 /* sub */
 
 color: var(--sub);
+}
+.bannercontent .bannerbottom .content .bottomitem .botomcontent .selectdiv input{
+    width: 100%;
+    background: transparent;
+    border: none;
+    margin-left: 3px;
+    outline: none;
+    font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+
+/* sub */
+
+color: var(--sub);
+}
+.bannercontent .bannerbottom .content .bottomitem .botomcontent .selectdiv input::placeholder{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    
+    
+    /* sub */
+    
+    color: var(--sub);
 }
 .bannercontent .bannerbottom .content .bottomitem button{
     padding: 19px 25px;
@@ -766,7 +1008,7 @@ color: var(--white);
 .filter .filtercontents .item{
     max-width: 286px;
     /* page-background */
-
+    display: none;
 background: #F5F9FF;
 /* sub-stroke */
 
@@ -778,6 +1020,9 @@ margin: 0 5px;
 }
 .filter .filtercontents .item:hover{
     background: var(--white);
+}
+.filter .filtercontents .item.active{
+    display: inline-block;
 }
 .filter .filtercontents .item .imgdiv{
     width: 100%;
@@ -1757,6 +2002,11 @@ footer .licensecon .col-12 .right .selectdownmenu ul{
 /*----------------------------------------------------------------------------------
 Media
 ----------------------------------------------------------------------------------*/
+@media (min-width:992px){
+    .MobileNav{
+        display: none;
+    }
+}
 @media (max-width:992px){
     .DekstopNavCol{
         display: none;
@@ -1844,6 +2094,9 @@ Media
 @media (max-width:600px){
     .bannercontent .item .content p{
         width: 78%;
+    }
+    .bannercontent .owl-dots{
+        bottom: 1%;
     }
     .bannercontent .owl-nav{
         padding: 0 5px;
