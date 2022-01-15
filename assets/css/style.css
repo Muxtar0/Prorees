@@ -2190,6 +2190,9 @@ Media
         flex-wrap: wrap;
         height: auto;
     }
+    .recomendedproperties .sectiontitle p {
+        width: 100%;
+    }
     .testimonials .sectiontitle p{
         width: 100%;
     }
@@ -2213,6 +2216,7 @@ Media
     }
     .downloadappcon .left p{
         width: 320px;
+        margin: auto;
     }
     .downloadappcon .right .content .buttons{
         transform: translateX(-80px);
@@ -2228,5 +2232,8 @@ Media
     }
     footer .licensecon .col-12 .right{
         margin-top: 15px;
+    }
+    footer ul .mainli{
+        width: 40%;
     }
 }
