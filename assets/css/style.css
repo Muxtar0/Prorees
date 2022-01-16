@@ -456,6 +456,7 @@ color: var(--white);
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
+    position: relative;
 }
 .DekstopNavBottom .navtext ul{
     margin: 0;
@@ -466,22 +467,40 @@ color: var(--white);
 }
 .DekstopNavBottom .navtext ul li{
     margin: 0 7px;
-    position: relative;
 }
 .DekstopNavBottom .navtext ul li .downmenu{
     position: absolute;
     left: 0;
-    top: 200%;
+    top: 120%;
     background: var(--main);
-    z-index: 100;
-    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    width: 900px;
     padding: 10px;
     border-radius: 0 0 5px 5px;
     transform: translateY(-10px);
     visibility: hidden;
     opacity: 0;
     transition: all 300ms;
+    width: 100%;
 }
+.DekstopNavBottom .navtext ul li .downmenu .has-child{
+    display: flex;
+    flex-direction: column;
+}
+.DekstopNavBottom .navtext ul li .downmenu .has-child > a{
+    margin-bottom: 20px;
+}
+.DekstopNavBottom .navtext ul li .downmenu .has-child ul > li > a.titlea{
+    margin-bottom: 5px;
+}
+.DekstopNavBottom .navtext ul li .downmenu .has-child ul > li li{
+    margin: 7px 0;
+}
+
+
 .DekstopNavBottom .navtext ul li .downmenu.active{
     transform: translateY(0);
     visibility: visible;
@@ -504,7 +523,9 @@ color: var(--white);
     text-align: start;
     align-content: center;
     justify-content: flex-start;
+    transition: all 300ms;
 }
+
 .DekstopNavBottom .navtext ul li a{
     text-decoration: none;
     display: flex;
@@ -524,6 +545,7 @@ color: var(--white);
 .DekstopNavBottom .navtext ul li a i{
     margin-left: 4px;
 }
+
 .DekstopNavBottom .account a{
     padding: 13px 12px; 
 }
