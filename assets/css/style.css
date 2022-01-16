@@ -497,7 +497,7 @@ color: var(--white);
     margin-bottom: 5px;
 }
 .DekstopNavBottom .navtext ul li .downmenu .has-child ul > li li{
-    margin: 7px 0;
+    margin: 10px 0 !important;
 }
 
 
@@ -513,7 +513,7 @@ color: var(--white);
 }
 .DekstopNavBottom .navtext ul li .downmenu ul li{
     width: 100%;
-    margin: 5px 0;
+    margin: 10px 0;
     text-align: start;
     display: flex;
 }
