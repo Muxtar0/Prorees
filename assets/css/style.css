@@ -37,6 +37,22 @@ Global Css
 .select{
     position: relative;
 }
+.select2-container{
+    width: 100%;
+}
+.select2-selection{
+    border: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+.select2-selection__rendered{
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    color: var(--sub) !important;
+}
 .select .selectmainarea{
     display: flex;
     align-items: center;

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <!-- Custom CSS link -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     
 </head>
 <body>
@@ -1000,7 +1001,7 @@
                                                 <path d="M16.9833 7.07508C15.3417 -0.141583 4.65001 -0.13325 3.01668 7.08342C2.05834 11.3167 4.69168 14.9001 7.00001 17.1168C8.67501 18.7334 11.325 18.7334 13.0083 17.1168C15.3083 14.9001 17.9417 11.3084 16.9833 7.07508Z" stroke="#6B7B99" stroke-width="1.5"/>
                                                 </svg>
                                             <div class="selectdiv">
-                                                <select name="city" id="">
+                                                <select class="js-example-basic-single" name="city" id="">
                                                     <option value="ss">Select City</option>
                                                     <option value="ss">Select City</option>
                                                     <option value="ss">Select City</option>
@@ -1018,7 +1019,7 @@
                                                 
                                                 
                                             <div class="selectdiv">
-                                                <select name="city" id="">
+                                                <select class="js-example-basic-single" name="city" id="">
                                                     <option value="ss">Select a category</option>
                                                     <option value="ss">Select a category</option>
                                                     <option value="ss">Select a category</option>
@@ -1035,7 +1036,7 @@
                                                 <path d="M11.029 14.3553L14.3623 11.022" stroke="#093D9F" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                                 </svg>
                                             <div class="selectdiv">
-                                                <select name="city" id="">
+                                                <select class="js-example-basic-single" name="city" id="">
                                                     <option value="ss">$50.000 - $250.000</option>
                                                     <option value="ss">$50.000 - $250.000</option>
                                                     <option value="ss">$50.000 - $250.000</option>
@@ -1051,7 +1052,7 @@
                                                 </svg>
                                                 
                                             <div class="selectdiv">
-                                                <select name="city" id="">
+                                                <select class="js-example-basic-single" name="city" id="">
                                                     <option value="ss">2 Bedrooms</option>
                                                     <option value="ss">2 Bedrooms</option>
                                                     <option value="ss">2 Bedrooms</option>
@@ -2311,7 +2312,12 @@
     <script src="assets/js/owl.carousel.min.js"></script>
     <!-- Custom JS script  -->
     <script src="assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
+        // In your Javascript (external .js resource or <script> tag)
+        $(document).ready(function() {
+            $('.js-example-basic-single').select2();
+        });
         $('.bannerslider').owlCarousel({
             loop:true,
             margin:0,
