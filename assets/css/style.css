@@ -501,7 +501,7 @@ color: var(--white);
 }
 
 
-.DekstopNavBottom .navtext ul li .downmenu.active{
+.DekstopNavBottom .navtext ul li:hover .downmenu{
     transform: translateY(0);
     visibility: visible;
     opacity: 1;
