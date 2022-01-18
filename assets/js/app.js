@@ -30,7 +30,7 @@ haburgermenuicon.addEventListener('click' , (e) => {
 })
 
 const filtertarget = document.querySelector('.recomendedproperties .filtertarget')
-const filteritems = document.querySelectorAll('.realfiltercontents .item')
+const filteritems = document.querySelectorAll('.realfiltercontents')
 const targetbtns = document.querySelectorAll('.recomendedproperties .filtertarget .tragetbtn')
 
 filtertarget.addEventListener('click' , (e) => {
@@ -41,20 +41,13 @@ filtertarget.addEventListener('click' , (e) => {
         for(let i = 0 ; i < filteritems.length; i++){
             filteritems[i].classList.remove('active')
         }
-        console.log(e.target.getAttribute('data-target'))
         e.target.classList.add('active')
-        if(e.target.getAttribute('data-target') == 'all'){
-            for(let i = 0 ; i < filteritems.length; i++){
-                filteritems[i].classList.add('active')
-            }
-        }
-        else{
-            for(let i = 0 ; i < filteritems.length ; i++){
-                if( e.target.getAttribute('data-target') === filteritems[i].getAttribute('data-kind')){
-                    console.log(filteritems[i].getAttribute('data-kind'))
-    
-                    filteritems[i].classList.add('active');
-                }
+
+        for(let i = 0 ; i < filteritems.length ; i++){
+            if( e.target.getAttribute('data-target') === filteritems[i].getAttribute('data-kind')){
+                console.log(filteritems[i].getAttribute('data-kind'))
+
+                filteritems[i].classList.add('active');
             }
         }
     }

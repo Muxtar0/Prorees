@@ -1095,10 +1095,17 @@ color: var(--white);
     justify-content: center;
     margin-top: 32px;
 }
+.filter .filtercontents .realfiltercontents{
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.filter .filtercontents .realfiltercontents.active{
+    display: flex;
+}
 .filter .filtercontents .item{
     max-width: 286px;
     /* page-background */
-    display: none;
 background: #F5F9FF;
 /* sub-stroke */
 
@@ -1110,9 +1117,6 @@ margin: 0 5px;
 }
 .filter .filtercontents .item:hover{
     background: var(--white);
-}
-.filter .filtercontents .item.active{
-    display: inline-block;
 }
 .filter .filtercontents .item .imgdiv{
     width: 100%;
@@ -2124,7 +2128,7 @@ Media
     .recomendedproperties{
         margin-top: 220px;
     }
-    .filter .filtercontents{
+    .filter .filtercontents .realfiltercontents{
         flex-wrap: wrap;
     }
     .filter .filtercontents .item{
