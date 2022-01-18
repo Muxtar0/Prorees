@@ -2279,3 +2279,8 @@ Media
         width: 40%;
     }
 }
+@media (max-width:375px){
+    .Specials {
+        padding-top: 240px;
+    }
+}
